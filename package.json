@@ -18,6 +18,7 @@
     "subscriptions-transport-ws": "^0.9.5"
   },
   "scripts": {
+    "install": "cd server && npm i && npm start && cd ..",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
