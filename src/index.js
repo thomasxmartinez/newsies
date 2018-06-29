@@ -13,10 +13,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { WebSocketLink } from 'apollo-link-ws';
 import { getMainDefinition } from 'apollo-utilities';
 
-const httpLink = new HttpLink({
-  uri: `
-https://eu1.prisma.sh`
-});
+const httpLink = new HttpLink({ uri: `http://localhost:4000` });
 
 const middlewareAuthLink = new ApolloLink((operation, forward) => {
   const token = localStorage.getItem(AUTH_TOKEN);
@@ -32,8 +29,7 @@ const middlewareAuthLink = new ApolloLink((operation, forward) => {
 const httpLinkWithAuthToken = middlewareAuthLink.concat(httpLink);
 
 const wsLink = new WebSocketLink({
-  uri: `
-https://eu1.prisma.sh`,
+  uri: `ws://localhost:4000`,
   options: {
     reconnect: true,
     connectionParams: {
