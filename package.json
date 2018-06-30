@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "install": "cd server && npm i && npm start && cd ..",
+    "install": "cd server && npm i && npm start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
