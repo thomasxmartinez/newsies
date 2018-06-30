@@ -23,5 +23,6 @@
     "install": "cd server && yarn install && node src/index.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }
